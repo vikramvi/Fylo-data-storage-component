@@ -1,0 +1,77 @@
+/* Write GOOD comments so that next developer ... */
+/* ( who happens to be a killer psycopath & knows where you stay ). */
+/* He's going to maintain this code; need NOT have to get back to you */
+
+/* ----------- ----------- ----------- ----------- ----------- ----------- */
+/* --------------------------- generic styling --------------------------- */
+/* ----------- ----------- ----------- ----------- ----------- ----------- */
+
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap");
+
+:root {
+  /* fonts related */
+  --ff-primary: "Raleway", sans-serif;
+
+  --fw-400: 400;
+  --fw-700: 700;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+
+html {
+  /* 62.5% of 16px browser font size is 10px */
+  font-size: 62.5%;
+  line-height: 1.15;
+}
+
+body {
+  /* 16px */
+  font-size: 1.6em;
+  font-weight: var(--fw-400);
+  font-family: var(--ff-primary);
+
+  /* ??? */
+  /* min-height: 100vh; */
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+article {
+  border: 1px solid red;
+}
+
+/* ----------- ----------- ----------- ----------- ----------- ------------ */
+/* --------------------------- specific styling --------------------------- */
+/* ----------- ----------- ----------- ----------- ----------- ------------ */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-areas: "features-component storage-component";
+}
+
+/* ----------- ----------- ----------- mobile first approach ----------- ----------- ----------- */
+
+/* ----------- ----------- ----------- desktop second approach ----------- ----------- ----------- */
+
+/* ----------- ----------- ----------- grid area names ----------- ----------- ----------- */
+
+.features-component {
+  grid-area: features-component;
+}
+
+.storage-component {
+  grid-area: storage-component;
+}
