@@ -50,7 +50,7 @@ img {
 }
 
 article {
-  border: 1px solid red;
+  /* border: 1px solid red; */
 }
 
 /* ----------- ----------- ----------- ----------- ----------- ------------ */
@@ -76,15 +76,30 @@ article {
   grid-template-columns: 1fr;
   grid-template-areas:
     "features-component__company-logo"
-    "features-component__feature-icons";
-  gap: 1rem;
+    "feature-icons";
+  gap: 3rem;
+  width: 330px;
+  height: 180px;
+  margin: 0 auto;
+  padding: 40px;
+  border-radius: 10px;
+  border-top-right-radius: 90px 90px;
 }
 
 .feature-icons {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-areas: "feature-icons__document feature-icons__folder feature-icons__upload";
-  gap: 2rem;
+  width: 180px;
+}
+
+.feature-icons > img {
+  border: 1px solid black;
+  padding: 10px;
+  background-color: black;
+  border-radius: 10px;
+  height: 45px;
+  width: 48px;
 }
 
 /* Component 1 - Mobile */
