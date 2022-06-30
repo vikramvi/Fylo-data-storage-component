@@ -102,11 +102,58 @@ article {
   width: 48px;
 }
 
-/* Component 1 - Mobile */
+/* Component 2 - Mobile */
+
 .storage-component {
   background-color: hsl(228, 54%, 41%);
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "storage-component__data-used"
+    "progress"
+    "storage-component-data-range"
+    "storage-component__data-left-to-use";
+  height: 160px;
+  width: 330px;
+  margin: 0 auto;
+  align-items: center;
+  justify-items: center;
 }
+
+.storage-component-data-range {
+  display: flex;
+  flex-direction: row;
+  width: 280px;
+  justify-content: space-between;
+}
+
+progress {
+  width: 90%;
+  display: block; /* default: inline-block */
+  padding: 3px;
+  border: 0 none;
+  background: rgb(215, 211, 211);
+  border-radius: 14px;
+}
+
+progress::-moz-progress-bar {
+  border-radius: 12px;
+  background: orange;
+}
+
+progress::-webkit-progress-bar {
+  background: transparent;
+}
+progress::-webkit-progress-value {
+  border-radius: 12px;
+  background: orange;
+}
+
 /* ----------- ----------- ----------- desktop second approach ----------- ----------- ----------- */
+
+/* Component 1 - Desktop */
+
+/* Component 2 - Desktop */
 
 /* ----------- ----------- ----------- grid area names ----------- ----------- ----------- */
 
@@ -140,4 +187,28 @@ article {
 
 .storage-component {
   grid-area: storage-component;
+}
+
+.storage-component__data-left-to-use {
+  grid-area: storage-component__data-left-to-use;
+}
+
+.storage-component__data-used {
+  grid-area: storage-component__data-used;
+}
+
+.storage-component-data-range {
+  grid-area: storage-component-data-range;
+}
+
+.storage-component-data-range__start {
+  grid-area: storage-component-data-range__start;
+}
+
+.storage-component-data-range__finish {
+  grid-area: storage-component-data-range__finish;
+}
+
+progress {
+  grid-area: progress;
 }
