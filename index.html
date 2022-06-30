@@ -12,33 +12,36 @@
   <link rel="stylesheet" href="./styles/style.css">
 </head>
 
-<body>
+<body class="grid-container">
+
   <!-- Component 1 -->
   <article class="features-component">
-    <img src="./images/logo.svg" alt="company logo">
-    <section>
-      <img src=" ./images/icon-document.svg" alt="document icon">
-      <img src="./images/icon-folder.svg" alt="folder icon">
-      <img src="./images/icon-upload.svg" alt="upload icon">
+    <img class="features-component__company-logo" src="./images/logo.svg" alt="company logo">
+    <section class="features-component__feature-icons feature-icons">
+      <img class="feature-icons__document" src=" ./images/icon-document.svg" alt="document icon">
+      <img class="feature-icons__folder" src="./images/icon-folder.svg" alt="folder icon">
+      <img class="feature-icons__upload" src="./images/icon-upload.svg" alt="upload icon">
     </section>
   </article>
+
   <!-- Component 2 -->
   <article class="storage-component">
-    <p>
+    <p class="storage-component__data-left-to-use">
       185 GB Left
     </p>
-    <p>
+    <p class="storage-component__data-used">
       You’ve used 815 GB of your storage
     </p>
-    <section>
-      <span>
+    <section class="storage-component__data-range storage-component-data-range">
+      <span class="storage-component-data-range__start">
         0 GB
       </span>
-      <span>
+      <span class="storage-component-data-range__finish">
         1000 GB
       </span>
     </section>
   </article>
+
 </body>
 
 </html>
