@@ -118,12 +118,6 @@ article {
 
 .features-component__company-logo {
   grid-area: features-component__company-logo;
-  /* border: 2px solid white; */
-}
-
-.features-component__feature-icons {
-  grid-area: features-component__feature-icons;
-  /* border: 2px solid white; */
 }
 
 .feature-icons {
