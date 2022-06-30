@@ -56,21 +56,78 @@ article {
 /* ----------- ----------- ----------- ----------- ----------- ------------ */
 /* --------------------------- specific styling --------------------------- */
 /* ----------- ----------- ----------- ----------- ----------- ------------ */
-.grid-container {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-areas: "features-component storage-component";
-}
 
 /* ----------- ----------- ----------- mobile first approach ----------- ----------- ----------- */
 
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "features-component"
+    "storage-component";
+  gap: 2rem;
+}
+
+/* Component 1 - Mobile */
+
+.features-component {
+  background-color: hsl(228, 54%, 41%);
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "features-component__company-logo"
+    "features-component__feature-icons";
+  gap: 1rem;
+}
+
+.feature-icons {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-areas: "feature-icons__document feature-icons__folder feature-icons__upload";
+  gap: 2rem;
+}
+
+/* Component 1 - Mobile */
+.storage-component {
+  background-color: hsl(228, 54%, 41%);
+}
 /* ----------- ----------- ----------- desktop second approach ----------- ----------- ----------- */
 
 /* ----------- ----------- ----------- grid area names ----------- ----------- ----------- */
 
+/* Component 1 grid areas */
+
 .features-component {
   grid-area: features-component;
 }
+
+.features-component__company-logo {
+  grid-area: features-component__company-logo;
+  /* border: 2px solid white; */
+}
+
+.features-component__feature-icons {
+  grid-area: features-component__feature-icons;
+  /* border: 2px solid white; */
+}
+
+.feature-icons {
+  grid-area: feature-icons;
+}
+
+.feature-icons__document {
+  grid-area: feature-icons__document;
+}
+
+.feature-icons__folder {
+  grid-area: feature-icons__folder;
+}
+
+.feature-icons__upload {
+  grid-area: feature-icons__upload;
+}
+
+/* Component 2 grid areas */
 
 .storage-component {
   grid-area: storage-component;
