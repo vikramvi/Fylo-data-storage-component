@@ -177,11 +177,59 @@ progress::-webkit-progress-value {
 }
 
 /* ----------- ----------- ----------- desktop second approach ----------- ----------- ----------- */
+@media screen and (min-width: 480px) {
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas:
+      "features-component storage-component__data-left-to-use"
+      "features-component storage-component";
+    /* background-image: url("../images/bg-desktop.png");
+    background-repeat: no-repeat; */
+    background-image: none;
+    margin: 5rem auto;
+    width: 700px;
+    height: 100px;
+    justify-items: end;
+  }
 
-/* Component 1 - Desktop */
+  /* Component 1 - Desktop */
+  .features-component {
+    margin: 0;
+    padding: 40px 40px 20px 40px;
+    height: 180px;
+    width: 310px;
+  }
 
-/* Component 2 - Desktop */
+  /* Component 2 - Desktop */
+  .storage-component {
+    height: 110px;
+    width: 450px;
+    border-radius: 10px;
+  }
 
+  .storage-component__data-used {
+    font-size: 1.1rem;
+    justify-self: start;
+    padding-left: 25px;
+  }
+
+  .storage-component-data-range {
+    margin-top: -30px;
+    padding-left: 25px;
+    justify-self: start;
+    width: 425px;
+  }
+
+  /* Component 3 - Desktop */
+  .storage-component__data-left-to-use {
+    margin: 0;
+    padding: 0;
+    margin-right: 20px;
+    height: 60px;
+    border: 1px solid red;
+  }
+}
 /* ----------- ----------- ----------- grid area names ----------- ----------- ----------- */
 
 /* Component 1 grid areas */
