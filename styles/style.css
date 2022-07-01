@@ -181,7 +181,7 @@ progress::-webkit-progress-value {
   .grid-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: 20px 110px;
+    grid-template-rows: 60px 110px;
     grid-template-areas:
       "features-component storage-component__data-left-to-use"
       "features-component storage-component";
@@ -198,9 +198,9 @@ progress::-webkit-progress-value {
   .features-component {
     margin: 0;
     padding: 40px 40px 20px 40px;
-    height: 150px;
-    width: 310px;
-    gap: 0;
+    height: 190px;
+    width: 340px;
+    gap: 2rem;
   }
 
   /* Component 2 - Desktop */
@@ -231,6 +231,7 @@ progress::-webkit-progress-value {
     height: 60px;
     border: 1px solid red;
     position: relative;
+    margin-top: 30px;
   }
 
   .storage-component__data-left-to-use > span::after {
