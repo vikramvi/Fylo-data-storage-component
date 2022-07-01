@@ -185,13 +185,14 @@ progress::-webkit-progress-value {
     grid-template-areas:
       "features-component storage-component__data-left-to-use"
       "features-component storage-component";
-    /* background-image: url("../images/bg-desktop.png");
-    background-repeat: no-repeat; */
-    background-image: none;
-    margin: 5rem auto;
+    margin: 25rem auto;
     width: 700px;
     height: 100px;
     justify-items: end;
+    background-color: hsl(229, 57%, 11%);
+    background-image: url("../images/bg-desktop.png");
+    background-repeat: no-repeat;
+    background-position: 50% 195%;
   }
 
   /* Component 1 - Desktop */
