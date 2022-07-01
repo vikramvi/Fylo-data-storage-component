@@ -181,6 +181,7 @@ progress::-webkit-progress-value {
   .grid-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 20px 110px;
     grid-template-areas:
       "features-component storage-component__data-left-to-use"
       "features-component storage-component";
@@ -197,7 +198,7 @@ progress::-webkit-progress-value {
   .features-component {
     margin: 0;
     padding: 40px 40px 20px 40px;
-    height: 160px;
+    height: 150px;
     width: 310px;
     gap: 0;
   }
@@ -238,7 +239,7 @@ progress::-webkit-progress-value {
     position: absolute;
     top: 100%;
     left: calc(93% - 10px);
-    background: #88b7d5;
+    background: #b40d0d;
     width: 40px;
     height: 20px;
 
