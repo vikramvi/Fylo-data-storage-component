@@ -281,11 +281,13 @@ progress::-webkit-progress-value {
   .data-left-to-use {
     margin: 0;
     padding: 0;
-    margin-right: 20px;
+    margin-right: 28px;
     height: 60px;
     /* border: 1px solid red; */
     position: relative;
-    margin-top: 30px;
+    margin-top: 48px;
+
+    border-bottom-right-radius: 0%;
   }
 
   .data-left-to-use > span::after {
@@ -293,11 +295,10 @@ progress::-webkit-progress-value {
     content: "";
     position: absolute;
     top: 100%;
-    left: calc(93% - 10px);
+    left: 86.6%;
     background: white;
     width: 40px;
     height: 20px;
-    border-bottom-right-radius: 0;
 
     /* The points are: (left top: x y, right top: x y, center bottom: x y) */
     clip-path: polygon(0 0, 50% 0, 50% 100%);
