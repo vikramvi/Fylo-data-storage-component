@@ -59,6 +59,15 @@ article {
 
 /* ----------- ----------- ----------- mobile first approach ----------- ----------- ----------- */
 
+body {
+  width: 100vw;
+  height: 100vh;
+  background-image: url("../images/bg-mobile.png");
+  background-size: cover;
+  /* background-position: center, center; */
+  background-repeat: no-repeat;
+}
+
 .grid-container {
   display: grid;
   grid-template-columns: 1fr;
@@ -67,8 +76,6 @@ article {
     "storage-component"
     "storage-component__data-left-to-use";
   gap: 2rem;
-  background-image: url("../images/bg-mobile.png");
-  background-repeat: no-repeat;
 }
 
 /* Component 1 - Mobile */
@@ -149,7 +156,7 @@ progress {
 
 progress::-moz-progress-bar {
   border-radius: 12px;
-  background: orange;
+  background: linear-gradient(to right, hsl(6, 100%, 80%), hsl(335, 100%, 65%));
 }
 
 progress::-webkit-progress-bar {
@@ -157,7 +164,9 @@ progress::-webkit-progress-bar {
 }
 progress::-webkit-progress-value {
   border-radius: 12px;
-  background: orange;
+
+  background: radial-gradient(4px at 98%, white, white 4px, transparent),
+    linear-gradient(to right, hsl(6, 100%, 80%), hsl(335, 100%, 65%));
 }
 
 /* Component 3 - Mobile */
@@ -170,10 +179,16 @@ progress::-webkit-progress-value {
   font-size: 4rem;
   background-color: white;
   border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  font-weight: bold;
 }
 
 .storage-component__data-left-to-use > span {
-  font-size: 1rem;
+  font-size: 1.3rem;
+  text-transform: capitalize;
+  font-weight: normal;
 }
 
 /* ----------- ----------- ----------- desktop second approach ----------- ----------- ----------- */
@@ -181,7 +196,7 @@ progress::-webkit-progress-value {
   .grid-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: 60px 110px;
+    grid-template-rows: 60px 150px;
     grid-template-areas:
       "features-component storage-component__data-left-to-use"
       "features-component storage-component";
@@ -202,12 +217,13 @@ progress::-webkit-progress-value {
     height: 190px;
     width: 340px;
     gap: 2rem;
+    margin-top: 3.9rem;
   }
 
   /* Component 2 - Desktop */
   .storage-component {
-    height: 110px;
-    width: 450px;
+    height: 150px;
+    width: 550px;
     border-radius: 10px;
   }
 
@@ -230,20 +246,21 @@ progress::-webkit-progress-value {
     padding: 0;
     margin-right: 20px;
     height: 60px;
-    border: 1px solid red;
+    /* border: 1px solid red; */
     position: relative;
     margin-top: 30px;
   }
 
   .storage-component__data-left-to-use > span::after {
-    border: 1px solid red;
+    /* border: 1px solid red; */
     content: "";
     position: absolute;
     top: 100%;
     left: calc(93% - 10px);
-    background: #b40d0d;
+    background: white;
     width: 40px;
     height: 20px;
+    border-bottom-right-radius: 0;
 
     /* The points are: (left top: x y, right top: x y, center bottom: x y) */
     clip-path: polygon(0 0, 50% 0, 50% 100%);

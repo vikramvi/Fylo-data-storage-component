@@ -12,37 +12,39 @@
   <link rel="stylesheet" href="./styles/style.css">
 </head>
 
-<body class="grid-container">
+<body>
+  <!-- let's keep "Grid Container" as seperate element other than "body".... -->
+  <!-- to avoid complication wrt background image -->
+  <div class="grid-container">
+    <!-- Component 1 -->
+    <article class="features-component">
+      <img class="features-component__company-logo" src="./images/logo.svg" alt="company logo">
+      <section class="feature-icons">
+        <img class="feature-icons__document" src=" ./images/icon-document.svg" alt="document icon">
+        <img class="feature-icons__folder" src="./images/icon-folder.svg" alt="folder icon">
+        <img class="feature-icons__upload" src="./images/icon-upload.svg" alt="upload icon">
+      </section>
+    </article>
 
-  <!-- Component 1 -->
-  <article class="features-component">
-    <img class="features-component__company-logo" src="./images/logo.svg" alt="company logo">
-    <section class="feature-icons">
-      <img class="feature-icons__document" src=" ./images/icon-document.svg" alt="document icon">
-      <img class="feature-icons__folder" src="./images/icon-folder.svg" alt="folder icon">
-      <img class="feature-icons__upload" src="./images/icon-upload.svg" alt="upload icon">
-    </section>
-  </article>
-
-  <!-- Component 2 -->
-  <article class="storage-component">
-    <p class="storage-component__data-used">
-      You’ve used 815 GB of your storage
+    <!-- Component 2 -->
+    <article class="storage-component">
+      <p class="storage-component__data-used">
+        You’ve used 815 GB of your storage
+      </p>
+      <progress max="100" value="75"></progress>
+      <section class="storage-component-data-range">
+        <span class="storage-component-data-range__start">
+          0 GB
+        </span>
+        <span class="storage-component-data-range__finish">
+          1000 GB
+        </span>
+      </section>
+    </article>
+    <p class="storage-component__data-left-to-use">
+      185 <span>GB Left</span>
     </p>
-    <progress max="100" value="75"></progress>
-    <section class="storage-component-data-range">
-      <span class="storage-component-data-range__start">
-        0 GB
-      </span>
-      <span class="storage-component-data-range__finish">
-        1000 GB
-      </span>
-    </section>
-  </article>
-  <p class="storage-component__data-left-to-use">
-    185 <span>GB Left</span>
-  </p>
-
+  </div>
 </body>
 
 </html>
