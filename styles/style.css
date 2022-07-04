@@ -166,13 +166,15 @@ progress {
   display: block; /* default: inline-block */
   padding: 3px;
   border: 0 none;
-  background: rgb(215, 211, 211);
+  background: hsl(229, 57%, 11%);
   border-radius: 14px;
 }
 
 progress::-moz-progress-bar {
   border-radius: 12px;
-  background: linear-gradient(to right, hsl(6, 100%, 80%), hsl(335, 100%, 65%));
+  /* background: linear-gradient(to right, hsl(6, 100%, 80%), hsl(335, 100%, 65%)); */
+  background: radial-gradient(6px at 98%, white, white 4px, transparent),
+    linear-gradient(to right, hsl(6, 100%, 80%), hsl(335, 100%, 65%));
 }
 
 progress::-webkit-progress-bar {
@@ -181,7 +183,7 @@ progress::-webkit-progress-bar {
 progress::-webkit-progress-value {
   border-radius: 12px;
 
-  background: radial-gradient(4px at 98%, white, white 4px, transparent),
+  background: radial-gradient(6px at 98%, white, white 4px, transparent),
     linear-gradient(to right, hsl(6, 100%, 80%), hsl(335, 100%, 65%));
 }
 
@@ -274,7 +276,7 @@ progress::-webkit-progress-value {
     margin-top: -30px;
     padding-left: 25px;
     justify-self: start;
-    width: 425px;
+    width: 525px;
   }
 
   /* Component 3 - Desktop */
