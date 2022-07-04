@@ -210,21 +210,41 @@ progress::-webkit-progress-value {
 
 /* ----------- ----------- ----------- desktop second approach ----------- ----------- ----------- */
 @media screen and (min-width: 480px) {
+  body {
+    /* reset background setting from mobile */
+    background: none;
+
+    background-image: url("../images/bg-desktop.png");
+    background-repeat: no-repeat;
+    /* https://css-tricks.com/almanac/properties/b/background-position/ */
+    background-position: 0 320px;
+    background-color: hsl(229, 57%, 11%);
+
+    /* center the grid container div */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
   .grid-container {
+    /* grid layout */
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: 60px 150px;
     grid-template-areas:
       "features-component data-left-to-use"
       "features-component storage-component";
-    margin: 25rem auto;
-    width: 700px;
-    height: 100px;
+
+    /* pull towards top */
+    margin-top: -80px;
+
+    /* why is this needed ? */
+    width: 914px;
+    height: 234px;
     justify-items: end;
-    background-color: hsl(229, 57%, 11%);
-    background-image: url("../images/bg-desktop.png");
-    background-repeat: no-repeat;
-    background-position: 50% 195%;
+
+    /* debug purpose only */
+    /* border: 2px solid red; */
   }
 
   /* Component 1 - Desktop */
@@ -234,7 +254,7 @@ progress::-webkit-progress-value {
     height: 190px;
     width: 340px;
     gap: 2rem;
-    margin-top: 3.9rem;
+    margin-top: 4rem;
   }
 
   /* Component 2 - Desktop */
