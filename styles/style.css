@@ -74,14 +74,14 @@ body {
   grid-template-areas:
     "features-component"
     "storage-component"
-    "storage-component__data-left-to-use";
+    "data-left-to-use";
   gap: 2rem;
 }
 
 /* Component 1 - Mobile */
 
 .features-component {
-  background-color: hsl(228, 54%, 41%);
+  background-color: hsl(228, 56%, 26%);
   display: grid;
   grid-template-columns: 1fr;
   grid-template-areas:
@@ -100,39 +100,55 @@ body {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-areas: "feature-icons__document feature-icons__folder feature-icons__upload";
-  width: 180px;
+  width: 215px;
 }
 
 .feature-icons > img {
   border: 1px solid black;
-  padding: 10px;
   background-color: black;
   border-radius: 10px;
-  height: 45px;
-  width: 48px;
+  height: 52px;
+  width: 52px;
+}
+
+.feature-icons__document {
+  padding: 12px;
+}
+
+.feature-icons__folder {
+  padding: 13px;
+}
+
+.feature-icons__upload {
+  padding: 15px 12px;
 }
 
 /* Component 2 - Mobile */
 
 .storage-component {
-  background-color: hsl(228, 54%, 41%);
+  background-color: hsl(228, 56%, 26%);
   display: grid;
   grid-template-columns: 1fr;
   grid-template-areas:
     "storage-component__data-used"
     "progress"
     "storage-component-data-range";
-  /* "storage-component__data-left-to-use"; */
-  height: 160px;
+  height: 200px;
   width: 330px;
+  padding: 2rem 0;
   margin: 0 auto;
   align-items: center;
   justify-items: center;
+  border-radius: 1.5rem;
 }
 
 .storage-component__data-used {
   margin-bottom: -20px;
-  color: white;
+  color: hsl(243, 100%, 93%);
+}
+
+.storage-component__data-used > span {
+  font-weight: bold;
 }
 
 .storage-component-data-range {
@@ -142,7 +158,7 @@ body {
   justify-content: space-between;
   margin-top: -50px;
   font-size: 12px;
-  color: white;
+  color: hsl(243, 100%, 93%);
 }
 
 progress {
@@ -171,10 +187,10 @@ progress::-webkit-progress-value {
 
 /* Component 3 - Mobile */
 
-.storage-component__data-left-to-use {
+.data-left-to-use {
   width: 150px;
   text-align: center;
-  margin: -40px auto 0 auto;
+  margin: -60px auto 0 auto;
   padding: 1rem 0;
   font-size: 4rem;
   background-color: white;
@@ -185,10 +201,11 @@ progress::-webkit-progress-value {
   font-weight: bold;
 }
 
-.storage-component__data-left-to-use > span {
+.data-left-to-use > span {
   font-size: 1.3rem;
-  text-transform: capitalize;
+  text-transform: uppercase;
   font-weight: normal;
+  color: hsl(229, 7%, 55%);
 }
 
 /* ----------- ----------- ----------- desktop second approach ----------- ----------- ----------- */
@@ -198,7 +215,7 @@ progress::-webkit-progress-value {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: 60px 150px;
     grid-template-areas:
-      "features-component storage-component__data-left-to-use"
+      "features-component data-left-to-use"
       "features-component storage-component";
     margin: 25rem auto;
     width: 700px;
@@ -241,7 +258,7 @@ progress::-webkit-progress-value {
   }
 
   /* Component 3 - Desktop */
-  .storage-component__data-left-to-use {
+  .data-left-to-use {
     margin: 0;
     padding: 0;
     margin-right: 20px;
@@ -251,7 +268,7 @@ progress::-webkit-progress-value {
     margin-top: 30px;
   }
 
-  .storage-component__data-left-to-use > span::after {
+  .data-left-to-use > span::after {
     /* border: 1px solid red; */
     content: "";
     position: absolute;
@@ -300,8 +317,8 @@ progress::-webkit-progress-value {
   grid-area: storage-component;
 }
 
-.storage-component__data-left-to-use {
-  grid-area: storage-component__data-left-to-use;
+.data-left-to-use {
+  grid-area: data-left-to-use;
 }
 
 .storage-component__data-used {
