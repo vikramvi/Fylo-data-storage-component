@@ -154,7 +154,7 @@ body {
 .storage-component-data-range {
   display: flex;
   flex-direction: row;
-  width: 280px;
+  width: 270px;
   justify-content: space-between;
   margin-top: -50px;
   font-size: 12px;
@@ -162,7 +162,8 @@ body {
 }
 
 progress {
-  width: 90%;
+  width: 82%;
+  height: 2rem;
   display: block; /* default: inline-block */
   padding: 3px;
   border: 0 none;
@@ -172,18 +173,17 @@ progress {
 
 progress::-moz-progress-bar {
   border-radius: 12px;
-  /* background: linear-gradient(to right, hsl(6, 100%, 80%), hsl(335, 100%, 65%)); */
-  background: radial-gradient(6px at 98%, white, white 4px, transparent),
+  background: radial-gradient(6px at 96%, white, white 4px, transparent),
     linear-gradient(to right, hsl(6, 100%, 80%), hsl(335, 100%, 65%));
 }
 
 progress::-webkit-progress-bar {
   background: transparent;
 }
+
 progress::-webkit-progress-value {
   border-radius: 12px;
-
-  background: radial-gradient(6px at 98%, white, white 4px, transparent),
+  background: radial-gradient(6px at 96%, white, white 4px, transparent),
     linear-gradient(to right, hsl(6, 100%, 80%), hsl(335, 100%, 65%));
 }
 
@@ -236,6 +236,7 @@ progress::-webkit-progress-value {
     grid-template-areas:
       "features-component data-left-to-use"
       "features-component storage-component";
+    column-gap: 3rem;
 
     /* pull towards top */
     margin-top: -80px;
@@ -267,9 +268,10 @@ progress::-webkit-progress-value {
   }
 
   .storage-component__data-used {
-    font-size: 1.1rem;
+    font-size: 1.4rem;
     justify-self: start;
-    padding-left: 25px;
+    padding-left: 32px;
+    color: hsl(243, 100%, 93%);
   }
 
   .storage-component-data-range {
@@ -277,6 +279,22 @@ progress::-webkit-progress-value {
     padding-left: 25px;
     justify-self: start;
     width: 525px;
+  }
+
+  progress {
+    width: 90%;
+  }
+
+  progress::-moz-progress-bar {
+    border-radius: 12px;
+    background: radial-gradient(6px at 98%, white, white 4px, transparent),
+      linear-gradient(to right, hsl(6, 100%, 80%), hsl(335, 100%, 65%));
+  }
+
+  progress::-webkit-progress-value {
+    border-radius: 12px;
+    background: radial-gradient(6px at 98%, white, white 4px, transparent),
+      linear-gradient(to right, hsl(6, 100%, 80%), hsl(335, 100%, 65%));
   }
 
   /* Component 3 - Desktop */
@@ -290,6 +308,11 @@ progress::-webkit-progress-value {
     margin-top: 48px;
 
     border-bottom-right-radius: 0%;
+  }
+
+  .data-left-to-use > span {
+    font-weight: bold;
+    color: hsl(229, 7%, 55%);
   }
 
   .data-left-to-use > span::after {
