@@ -74,7 +74,6 @@ body {
   height: 100vh;
   background-image: url("../images/bg-mobile.png");
   background-size: cover;
-  /* background-position: center, center; */
   background-repeat: no-repeat;
 }
 
@@ -338,7 +337,7 @@ progress::-webkit-progress-value {
       ),
       linear-gradient(
         to right,
-        var(----clr-gradient-start),
+        var(--clr-gradient-start),
         var(--clr-gradient-end)
       );
   }
