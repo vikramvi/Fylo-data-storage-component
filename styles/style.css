@@ -72,6 +72,7 @@ article {
 body {
   width: 100vw;
   height: 100vh;
+
   background-image: url("../images/bg-mobile.png");
   background-size: cover;
   background-repeat: no-repeat;
@@ -90,7 +91,11 @@ body {
     "storage-component"
     "data-left-to-use";
   gap: 2rem;
+}
 
+.grid-container,
+.features-component,
+.storage-component {
   width: 100%;
   max-width: 33rem;
 }
@@ -107,8 +112,6 @@ body {
   gap: 3rem;
 
   /* component dimensions */
-  width: 100%;
-  max-width: 33rem;
   height: 18rem;
 
   /* component box model */
@@ -154,10 +157,8 @@ body {
 }
 
 /* Component 2 - Mobile */
-
 .storage-component {
-  background-color: var(--clr-dark-blue);
-
+  /* 1. CSS Layout */
   display: grid;
   grid-template-columns: 1fr;
   grid-template-areas:
@@ -167,13 +168,17 @@ body {
   align-items: center;
   justify-items: center;
 
+  /* 2. Component dimensions */
   height: 20rem;
-  width: 100%;
-  max-width: 33rem;
 
+  /* 3. Component box model */
   padding: 2rem 0;
   margin: 0 auto;
 
+  /* 4. Font size, weight, Color */
+  background-color: var(--clr-dark-blue);
+
+  /* 5. Border */
   border-radius: 1.5rem;
 }
 
@@ -205,7 +210,9 @@ progress {
   height: 2rem;
 
   display: block; /* default: inline-block */
+
   padding: 0.3rem;
+
   border: 0 none;
   background: var(--clr-very-dark-blue);
   border-radius: 1.4rem;
@@ -246,24 +253,27 @@ progress::-webkit-progress-value {
 }
 
 /* Component 3 - Mobile */
-
 .data-left-to-use {
+  /* 1. CSS Layout */
   display: flex;
   align-items: center;
   justify-content: space-evenly;
 
+  /* 2. Component dimensions */
   width: 100%;
   max-width: 15rem;
 
-  text-align: center;
-
+  /* 3. Component box model */
   margin: -6rem auto 0 auto;
   padding: 1rem 0;
 
+  /* 4. Font size, weight, Color */
   font-size: 4rem;
   font-weight: var(--fw-700);
-
+  text-align: center;
   background-color: var(--clr-white);
+
+  /* 5. Border */
   border-radius: 0.8rem;
 }
 
@@ -309,7 +319,6 @@ progress::-webkit-progress-value {
 
     width: 100%;
     max-width: 91.4rem;
-
     height: 23.4rem;
 
     /* debug purpose only */
@@ -318,15 +327,15 @@ progress::-webkit-progress-value {
 
   /* Component 1 - Desktop */
   .features-component {
+    gap: 2rem;
+
     margin: 0;
     padding: 4rem 4rem 2rem 4rem;
+    margin-top: 4rem;
 
     height: 19rem;
     width: 100%;
     max-width: 34rem;
-
-    gap: 2rem;
-    margin-top: 4rem;
   }
 
   /* Component 2 - Desktop */
@@ -339,16 +348,19 @@ progress::-webkit-progress-value {
   }
 
   .storage-component__data-used {
-    font-size: 1.4rem;
     justify-self: start;
-    padding-left: 3.2rem;
+
+    font-size: 1.4rem;
     color: var(--clr-pale-blue);
+
+    padding-left: 3.2rem;
   }
 
   .storage-component-data-range {
+    justify-self: start;
+
     margin-top: -3rem;
     padding-left: 3rem;
-    justify-self: start;
 
     width: 100%;
     max-width: 52.5rem;
