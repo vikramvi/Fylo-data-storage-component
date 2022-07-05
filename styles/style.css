@@ -95,34 +95,44 @@ body {
 /* Component 1 - Mobile */
 
 .features-component {
-  background-color: var(--clr-dark-blue);
+  /* CSS Layout */
   display: grid;
   grid-template-columns: 1fr;
   grid-template-areas:
     "features-component__company-logo"
     "feature-icons";
   gap: 3rem;
-  width: 33rem;
+
+  /* component dimensions */
+  max-width: 33rem;
   height: 18rem;
+
+  /* component box model */
+  /* https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model */
   margin: 0 auto;
   padding: 4rem;
+
   border-radius: 1rem;
   border-top-right-radius: 9rem 9rem;
+
+  background-color: var(--clr-dark-blue);
 }
 
 .feature-icons {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-areas: "feature-icons__document feature-icons__folder feature-icons__upload";
-  width: 21.5rem;
+
+  max-width: 21.5rem;
 }
 
 .feature-icons > img {
   border: 0.1rem solid var(--clr-very-dark-blue);
   background-color: var(--clr-very-dark-blue);
   border-radius: 1rem;
+
   height: 5.2rem;
-  width: 5.2rem;
+  max-width: 5.2rem;
 }
 
 .feature-icons__document {
@@ -141,18 +151,22 @@ body {
 
 .storage-component {
   background-color: var(--clr-dark-blue);
+
   display: grid;
   grid-template-columns: 1fr;
   grid-template-areas:
     "storage-component__data-used"
     "progress"
     "storage-component-data-range";
-  height: 20rem;
-  width: 33rem;
-  padding: 2rem 0;
-  margin: 0 auto;
   align-items: center;
   justify-items: center;
+
+  height: 20rem;
+  max-width: 33rem;
+
+  padding: 2rem 0;
+  margin: 0 auto;
+
   border-radius: 1.5rem;
 }
 
@@ -168,16 +182,20 @@ body {
 .storage-component-data-range {
   display: flex;
   flex-direction: row;
-  width: 270px;
   justify-content: space-between;
+
+  max-width: 270px;
+
   margin-top: -50px;
+
   font-size: 12px;
   color: var(--clr-pale-blue);
 }
 
 progress {
-  width: 82%;
+  max-width: 82%;
   height: 2rem;
+
   display: block; /* default: inline-block */
   padding: 0.3rem;
   border: 0 none;
@@ -222,17 +240,21 @@ progress::-webkit-progress-value {
 /* Component 3 - Mobile */
 
 .data-left-to-use {
-  width: 15rem;
+  max-width: 15rem;
   text-align: center;
+
   margin: -6rem auto 0 auto;
   padding: 1rem 0;
+
   font-size: 4rem;
+  font-weight: var(--fw-700);
+
   background-color: var(--clr-white);
   border-radius: 0.8rem;
+
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  font-weight: var(--fw-700);
 }
 
 .data-left-to-use > span {
@@ -274,7 +296,7 @@ progress::-webkit-progress-value {
     margin-top: -8rem;
 
     /* why is this needed ? */
-    width: 91.4rem;
+    max-width: 91.4rem;
     height: 23.4rem;
     justify-items: end;
 
@@ -286,8 +308,10 @@ progress::-webkit-progress-value {
   .features-component {
     margin: 0;
     padding: 4rem 4rem 2rem 4rem;
+
     height: 19rem;
-    width: 34rem;
+    max-width: 34rem;
+
     gap: 2rem;
     margin-top: 4rem;
   }
@@ -295,7 +319,8 @@ progress::-webkit-progress-value {
   /* Component 2 - Desktop */
   .storage-component {
     height: 15rem;
-    width: 55rem;
+    max-width: 55rem;
+
     border-radius: 1rem;
   }
 
@@ -310,11 +335,11 @@ progress::-webkit-progress-value {
     margin-top: -3rem;
     padding-left: 2.5rem;
     justify-self: start;
-    width: 52.5rem;
+    max-width: 52.5rem;
   }
 
   progress {
-    width: 90%;
+    max-width: 90%;
   }
 
   progress::-moz-progress-bar {
@@ -349,13 +374,16 @@ progress::-webkit-progress-value {
 
   /* Component 3 - Desktop */
   .data-left-to-use {
+    /* border: 1px solid red; */
+
     margin: 0;
     padding: 0;
     margin-right: 2.8rem;
-    height: 6rem;
-    /* border: 1px solid red; */
-    position: relative;
     margin-top: 4.8rem;
+
+    height: 6rem;
+
+    position: relative;
 
     border-bottom-right-radius: 0%;
   }
@@ -369,10 +397,12 @@ progress::-webkit-progress-value {
     /* border: 1px solid red; */
     content: "";
     position: absolute;
+
     top: 100%;
     left: 86.6%;
     background: var(--clr-white);
-    width: 4rem;
+
+    max-width: 4rem;
     height: 2rem;
 
     /* The points are: (left top: x y, right top: x y, center bottom: x y) */
