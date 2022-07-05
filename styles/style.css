@@ -158,7 +158,7 @@ body {
 }
 
 .storage-component__data-used > span {
-  font-weight: bold;
+  font-weight: var(--fw-700);
 }
 
 .storage-component-data-range {
@@ -228,7 +228,7 @@ progress::-webkit-progress-value {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  font-weight: bold;
+  font-weight: var(--fw-700);
 }
 
 .data-left-to-use > span {
@@ -357,7 +357,7 @@ progress::-webkit-progress-value {
   }
 
   .data-left-to-use > span {
-    font-weight: bold;
+    font-weight: var(--fw-700);
     color: var(--clr-grayish-blue);
   }
 
