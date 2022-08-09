@@ -294,7 +294,7 @@ progress::-webkit-progress-value {
     background-image: url("../images/bg-desktop.png");
     background-repeat: no-repeat;
     /* https://css-tricks.com/almanac/properties/b/background-position/ */
-    background-position: 0 32rem;
+    background-position: 0 50vh;
     background-color: var(--clr-very-dark-blue);
 
     /* center the grid container div */
@@ -406,8 +406,8 @@ progress::-webkit-progress-value {
 
     margin: 0;
     padding: 0;
-    margin-right: 3rem;
-    margin-top: 4.8rem;
+    margin-right: 6.2rem;
+    margin-top: 4.2rem;
 
     height: 6rem;
 
